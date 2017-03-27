@@ -1,0 +1,35 @@
+name: telegram-cli
+version: '1.4.1'
+summary: Command-line interface for Telegram. Uses the readline interface.
+description: |
+  Telegram-cli is a command-line interface for Telegram, using the Telegram 
+  API and libopenssl for encryption. Type `help` to list all commands, the app
+  comes with exhaustive tab-completion.
+  Source code available at https://github.com/vysheng/tg
+grade: stable
+confinement: strict
+
+apps:
+    telegram-cli:
+        command: bin/telegram-cli
+        plugs: [network, home]
+
+parts:
+  tg:
+    plugin: autotools
+    source: https://github.com/vysheng/tg.git
+    build-packages:
+        - libreadline-dev
+        - libconfig-dev
+        - libssl-dev
+        - liblua5.2-dev
+        - libevent-dev
+        - libjansson-dev
+        - libpython-dev
+    stage-packages:
+        - lua5.2
+    build: |
+      ./configure
+      make
+    install: |
+      cp -r bin/ $SNAPCRAFT_PART_INSTALL/bin
