@@ -1,4 +1,7 @@
 # telegram-cli-snap
+
+![alt text](https://github.com/MariusQuabeck/telegram-cli-snap/raw/master/telegram-cli-icon1.png "telegram-cli-snap logo")
+
 Command-line interface for Telegram.
 
 This is a snap for telegram-cli
