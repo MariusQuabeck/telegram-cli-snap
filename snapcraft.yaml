@@ -17,7 +17,7 @@ apps:
 parts:
   tg:
     plugin: autotools
-    source: https://github.com/vysheng/tg.git
+    source: https://github.com/MariusQuabeck/telegram-cli-snap.git
     build-packages:
         - libreadline-dev
         - libconfig-dev
