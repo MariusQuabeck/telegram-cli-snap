@@ -1,5 +1,5 @@
 name: telegram-cli
-version: '1.3.1_snap'
+version: '1.3.1'
 summary: Command-line interface for Telegram. Uses the readline interface.
 description: |
   Telegram-cli is a command-line interface for Telegram, using the Telegram 
